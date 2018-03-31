@@ -13,7 +13,7 @@ class Home extends Component {
     }
     //get all post
     componentDidMount(){
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('/posts')
         .then(response =>{
                 const data = response.data.slice(0,4);
                 const somthing = data.map(datas=>{

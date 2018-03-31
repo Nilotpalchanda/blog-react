@@ -3,19 +3,19 @@ import axios from 'axios'
 class FullPost extends Component{
 
   state={
-    loadedPost : null,
-    posts:[]
+    loadedPost : null
   }
 
   componentDidUpdate(){
-
+    if ( this.props.id ) {
     if(!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost === this.props.id)){
-    axios.get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
+    axios.get('/posts/' + this.props.id)
     .then(response=>{
       this.setState({loadedPost: response.data})
       //console.log(response)
     })
     }
+  }
 
   }
 

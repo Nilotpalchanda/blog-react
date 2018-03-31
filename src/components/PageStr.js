@@ -10,9 +10,10 @@ const PageStr = (props) =>(
 		<div>
 			<Header/>
 		</div>
-		<div>
+		<div className="PropsDiv">
 			{props.children}
 		</div>
+
 		<div>
 			<Footer/>
 		</div>
